@@ -19,77 +19,77 @@ export const ShowCase2 = (): React.JSX.Element => {
         <AnimatePresence>
             <div className="fixed container flex flex-col">
                 <div className="flex">
-                {
-                    exploreProgress === 1 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
-                        <div className="relative flex flex-col">
-                            <motion.div
-                                initial={{ opacity: 0, y: "-100%" }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
-                                <p className="text-6xl text-black">Câu truyện đi cùng ta theo năm tháng...</p>
-                                <p className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
+                    {
+                        exploreProgress === 1 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
+                            <div className="relative flex flex-col">
+                                <motion.div
+                                    initial={{ opacity: 0, y: "-100%" }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
+                                    <p style={{ fontSize: '2rem' }} className="text-6xl text-gray-500">Câu truyện đi cùng ta theo năm tháng...</p>
+                                    <p style={{ fontSize: '1rem' }} className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
+                                </motion.div>
+                                <motion.div initial="offscreen"
+                                    viewport={{ once: true, amount: 0.8 }}
+                                    whileInView="onscreen" variants={cardVariants}>
+                                    <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
+                                </motion.div>
+                            </div>
+                            <motion.div initial={{ opacity: 0, x: "-100%" }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: "100%" }}>
+                                <Image alt="thumbnail" style={{width: '80%', height: '80%'}} src={Images.HoaKho2} />
                             </motion.div>
-                            <motion.div initial="offscreen"
-                                viewport={{ once: true, amount: 0.8 }}
-                                whileInView="onscreen" variants={cardVariants}>
-                                <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
-                            </motion.div>
-                        </div>
-                        <motion.div initial={{ opacity: 0, x: "-100%" }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: "100%" }}>
-                            <Image alt="thumbnail" width={500} height={500} src={Images.HoaKho2} />
-                        </motion.div>
-                    </div> : null
-                }
+                        </div> : null
+                    }
 
-                {
-                    exploreProgress === 2 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
-                        <div className="relative flex flex-col">
-                            <motion.div
-                                initial={{ opacity: 0, y: "-100%" }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
-                                <p className="text-6xl text-black">Câu truyện đi cùng ta theo năm tháng...</p>
-                                <p className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
+                    {
+                        exploreProgress === 2 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
+                            <div className="relative flex flex-col">
+                                <motion.div
+                                    initial={{ opacity: 0, y: "-100%" }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
+                                    <p style={{ fontSize: '2rem' }} className="text-6xl text-gray-500">Câu truyện đi cùng ta theo năm tháng...</p>
+                                    <p style={{ fontSize: '1rem' }} className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
+                                </motion.div>
+                                <motion.div initial="offscreen"
+                                    viewport={{ once: true, amount: 0.8 }}
+                                    whileInView="onscreen" variants={cardVariants}>
+                                    <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
+                                </motion.div>                        </div>
+                            <motion.div initial={{ opacity: 0, x: "-100%" }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: "100%" }}>
+                                <Image alt="thumbnail" style={{width: '80%', height: '80%'}} src={Images.HoaKho3} />
                             </motion.div>
-                            <motion.div initial="offscreen"
-                                viewport={{ once: true, amount: 0.8 }}
-                                whileInView="onscreen" variants={cardVariants}>
-                                <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
-                            </motion.div>                        </div>
-                        <motion.div initial={{ opacity: 0, x: "-100%" }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: "100%" }}>
-                            <Image alt="thumbnail" width={500} height={500} src={Images.HoaKho3} />
-                        </motion.div>
-                    </div> : null
-                }
+                        </div> : null
+                    }
 
-                {
-                    exploreProgress === 3 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
-                        <div className="relative flex flex-col">
-                            <motion.div
-                                initial={{ opacity: 0, y: "-100%" }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
-                                <p className="text-6xl text-black">Câu truyện đi cùng ta theo năm tháng...</p>
-                                <p className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
+                    {
+                        exploreProgress === 3 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
+                            <div className="relative flex flex-col">
+                                <motion.div
+                                    initial={{ opacity: 0, y: "-100%" }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
+                                    <p style={{ fontSize: '2rem' }} className="text-6xl text-gray-500">Câu truyện đi cùng ta theo năm tháng...</p>
+                                    <p style={{ fontSize: '1rem' }} className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
+                                </motion.div>
+                                <motion.div initial="offscreen"
+                                    viewport={{ once: true, amount: 0.8 }}
+                                    whileInView="onscreen" variants={cardVariants}>
+                                    <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
+                                </motion.div>                        </div>
+                            <motion.div initial={{ opacity: 0, x: "-100%" }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: "100%" }}>
+                                <Image alt="thumbnail" style={{width: '80%', height: '80%'}} src={Images.HoaKho4} />
                             </motion.div>
-                            <motion.div initial="offscreen"
-                                viewport={{ once: true, amount: 0.8 }}
-                                whileInView="onscreen" variants={cardVariants}>
-                                <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
-                            </motion.div>                        </div>
-                        <motion.div initial={{ opacity: 0, x: "-100%" }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: "100%" }}>
-                            <Image alt="thumbnail" width={500} height={500} src={Images.HoaKho4} />
-                        </motion.div>
-                    </div> : null
-                }
-                <ProgressBar maxProgress={3} progress={exploreProgress}/>
-                <FunctionBar/>
+                        </div> : null
+                    }
+                    <ProgressBar maxProgress={3} progress={exploreProgress} />
+                    <FunctionBar />
                 </div>
             </div>
 
