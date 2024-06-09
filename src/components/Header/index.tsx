@@ -28,7 +28,7 @@ export const Header = ({ }: HeaderProp): React.JSX.Element => {
                 <Image width={50} height={50} alt="app_icon" src={Images.CircleFlower1}></Image>
             </div>
             <div style={{height: 30, bottom: -30}} className="fixed top-0 translate-y-16 z-10 flex rounded-b-md px-5  border-mainTheme bg-mainTheme">
-              <p className="text-appWhite">Happy Petals</p>
+              <p className="text-appWhite">Blooming soul</p>
             </div>
         </div>
     )

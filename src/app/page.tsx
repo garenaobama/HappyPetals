@@ -8,7 +8,7 @@ import { Images } from "@/images";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between  bg-appWhite">
-      <Image className="fixed left-0 top-0 z-20" src={Images.CornerDecor} alt="corder" width={400} height={300}/>
+      <Image className="fixed left-0 top-0 z-20 w-1/4" src={Images.CornerDecor} alt="corder"/>
       <Provider store={store}>
         <App />
       </Provider>

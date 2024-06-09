@@ -1,4 +1,4 @@
-import HoaKho1 from './demo_product_1.png'
+import HoaKho1 from './demo_product_1.jpg'
 import HoaKho2 from './demo_product_2.jpg'
 import HoaKho3 from './demo_product_3.jpg'
 import HoaKho4 from './demo_product_4.jpg'

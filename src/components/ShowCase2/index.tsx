@@ -7,103 +7,57 @@ import { AnimatePresence, Variants, motion } from "framer-motion";
 import { cardVariants } from "@/ultis";
 import { ProgressBar } from "../ProgressBar";
 import { FunctionBar } from "../FunctionBar";
+import { LayoutBody } from "../LayoutBody";
 
-type ShowCase2Prop = {
-}
+type ShowCase2Prop = {};
+
+const Data = [
+  {
+    title: "Câu truyện đi cùng ta theo năm tháng...",
+    content:
+      '"Những câu truyện lãng mạn nhất thường đến từ những tâm hồn bay bổng. Dòng chảy suy nghĩ điểm thêm bởi những đóa hoa nở rộ, để rồi kết tinh lại thành một kiệt tác nghệ thuật nhân gian. Blooming soul mang đến những sản phẩm đến từ những câu truyện thi vị như thế..."',
+    thumb: Images.HoaKho2,
+  },
+  {
+    title: "Câu truyện đi cùng ta theo năm tháng...",
+    content:
+      '"Những câu truyện lãng mạn nhất thường đến từ những tâm hồn bay bổng. Dòng chảy suy nghĩ điểm thêm bởi những đóa hoa nở rộ, để rồi kết tinh lại thành một kiệt tác nghệ thuật nhân gian. Blooming soul mang đến những sản phẩm đến từ những câu truyện thi vị như thế..."',
+    thumb: Images.HoaKho3,
+  },
+  {
+    title: "Câu truyện đi cùng ta theo năm tháng...",
+    content:
+      '"Những câu truyện lãng mạn nhất thường đến từ những tâm hồn bay bổng. Dòng chảy suy nghĩ điểm thêm bởi những đóa hoa nở rộ, để rồi kết tinh lại thành một kiệt tác nghệ thuật nhân gian. Blooming soul mang đến những sản phẩm đến từ những câu truyện thi vị như thế..."',
+    thumb: Images.HoaKho4,
+  },
+];
 
 export const ShowCase2 = (): React.JSX.Element => {
+  const exploreProgress = useAppSelector((state) => state.app.exploreProgress);
 
-    const exploreProgress = useAppSelector((state) => state.app.exploreProgress)
-
-    return (exploreProgress >= 1 ?
-        <AnimatePresence>
-            <div className="fixed container flex flex-col">
-                <div className="flex">
-                {
-                    exploreProgress === 1 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
-                        <div className="relative flex flex-col">
-                            <motion.div
-                                initial={{ opacity: 0, y: "-100%" }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
-                                <p className="text-6xl text-black">Câu truyện đi cùng ta theo năm tháng...</p>
-                                <p className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
-                            </motion.div>
-                            <motion.div initial="offscreen"
-                                viewport={{ once: true, amount: 0.8 }}
-                                whileInView="onscreen" variants={cardVariants}>
-                                <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
-                            </motion.div>
-                        </div>
-                        <motion.div initial={{ opacity: 0, x: "-100%" }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: "100%" }}>
-                            <Image alt="thumbnail" width={500} height={500} src={Images.HoaKho2} />
-                        </motion.div>
-                    </div> : null
-                }
-
-                {
-                    exploreProgress === 2 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
-                        <div className="relative flex flex-col">
-                            <motion.div
-                                initial={{ opacity: 0, y: "-100%" }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
-                                <p className="text-6xl text-black">Câu truyện đi cùng ta theo năm tháng...</p>
-                                <p className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
-                            </motion.div>
-                            <motion.div initial="offscreen"
-                                viewport={{ once: true, amount: 0.8 }}
-                                whileInView="onscreen" variants={cardVariants}>
-                                <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
-                            </motion.div>                        </div>
-                        <motion.div initial={{ opacity: 0, x: "-100%" }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: "100%" }}>
-                            <Image alt="thumbnail" width={500} height={500} src={Images.HoaKho3} />
-                        </motion.div>
-                    </div> : null
-                }
-
-                {
-                    exploreProgress === 3 ? <div className="grid grid-cols-2 gap-20 relative items-center h-screen">
-                        <div className="relative flex flex-col">
-                            <motion.div
-                                initial={{ opacity: 0, y: "-100%" }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, x: "100%" }} className="flex flex-col gap-10 pl-24">
-                                <p className="text-6xl text-black">Câu truyện đi cùng ta theo năm tháng...</p>
-                                <p className="text-3xl">&quot;Hoa khô, với vẻ đẹp vĩnh cửu, luôn mang trong mình một câu chuyện vĩnh hằng trong trái tim của những người yêu hoa. Chúng không phải chỉ là những bông hoa tàn úa, mà còn là biểu tượng của sự kiên nhẫn và sự sống mãi mãi&quot;</p>
-                            </motion.div>
-                            <motion.div initial="offscreen"
-                                viewport={{ once: true, amount: 0.8 }}
-                                whileInView="onscreen" variants={cardVariants}>
-                                <Image className="absolute bottom-0 rotate-[-27deg]" src={Images.CornerFlower1} width={200} height={200} alt="corner_image" />
-                            </motion.div>                        </div>
-                        <motion.div initial={{ opacity: 0, x: "-100%" }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: "100%" }}>
-                            <Image alt="thumbnail" width={500} height={500} src={Images.HoaKho4} />
-                        </motion.div>
-                    </div> : null
-                }
-                <ProgressBar maxProgress={3} progress={exploreProgress}/>
-                <FunctionBar/>
-                </div>
-            </div>
-
-        </AnimatePresence>
-        : <></>)
-}
-
-export const ExploreButton = () => {
-    return (
-        <button>
-            <div className="rounded-full p-3 justify-center flex gap-2 border-2">
-                <p>Khám phá câu truyện</p>
-                <Image alt="arrow icon" src={Icons.ArrowDown} />
-            </div>
-        </button>
-    )
-}
+  return exploreProgress >= 1 ? (
+    <AnimatePresence>
+      <div className="fixed container flex flex-col">
+        <div className="flex">
+          <div
+            style={{ height: "85vh" }}
+            className="fixed container my-5 flex flex-col justify-center mb-5"
+          >
+            {exploreProgress && (
+              <LayoutBody
+                key={exploreProgress}
+                title={Data[exploreProgress - 1].title}
+                content={Data[exploreProgress - 1].content}
+                thumb={Data[exploreProgress - 1].thumb}
+              />
+            )}
+          </div>
+          <ProgressBar maxProgress={3} progress={exploreProgress} />
+          <FunctionBar />
+        </div>
+      </div>
+    </AnimatePresence>
+  ) : (
+    <></>
+  );
+};
